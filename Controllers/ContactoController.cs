@@ -20,6 +20,12 @@ namespace CONTACTO_EJERCICIO.Controllers
 
         public IActionResult Index()
         {
+            var listcontactos = new List<Contacto>();
+            listcontactos.Add(new Contacto(){FirstName="Juan",LastName="Perez"});
+            listcontactos.Add(new Contacto(){FirstName="Bob",LastName="Marley"});
+            listcontactos.Add(new Contacto(){FirstName="Dante",LastName="Rodriguez"});
+            
+            ViewData["Message"] = "";
             return View();
         }
 
